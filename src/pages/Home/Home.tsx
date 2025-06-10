@@ -15,7 +15,6 @@ import { useEffect } from "react";
 import { styles } from "./Home.styles";
 
 const Home = () => {
-  console.log("baseURl", import.meta.env.BASE_URL);
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   const columns = isSmall ? 2 : 4;
