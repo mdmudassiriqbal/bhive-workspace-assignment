@@ -75,7 +75,7 @@ const SpaceCard: React.FC<SpaceCardProps> = ({
           sx={{ borderRadius: "6px" }}
           component="img"
           height="194"
-          image={`../src/assets/${image}`}
+          image={`${import.meta.env.BASE_URL}/assets/${image}`}
           alt="Paella dish"
         />
       </Box>

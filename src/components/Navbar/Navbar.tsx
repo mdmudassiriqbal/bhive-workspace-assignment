@@ -1,6 +1,6 @@
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
-import Logo from "../../assets/logo.svg";
+
 const Navbar = () => {
   return (
     <AppBar
@@ -15,7 +15,11 @@ const Navbar = () => {
     >
       <Toolbar sx={{ height: "100%", ml: 12, mr: 12 }}>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          <img src={Logo} alt="Logo" style={{ height: 30 }} />
+          <img
+            src={`${import.meta.env.BASE_URL}/assets/logo.svg`}
+            alt="Logo"
+            style={{ height: 30 }}
+          />
         </Typography>
         <IconButton
           sx={{

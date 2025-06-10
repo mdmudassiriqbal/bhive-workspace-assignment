@@ -1,4 +1,3 @@
-import CoworkingImg from "@/assets/CoworkingImg.svg";
 import SpaceCard from "@/components/SpaceCard/SpaceCard";
 import { features } from "@/constants/features";
 import { getSpaces } from "@/services/spaces/spaces";
@@ -16,6 +15,7 @@ import { useEffect } from "react";
 import { styles } from "./Home.styles";
 
 const Home = () => {
+  console.log("baseURl", import.meta.env.BASE_URL);
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   const columns = isSmall ? 2 : 4;
@@ -94,7 +94,7 @@ const Home = () => {
           >
             <Box sx={styles.heroRightPolygon(isSmall)} />
             <img
-              src={CoworkingImg}
+              src={`${import.meta.env.BASE_URL}/assets/CoworkingImg.svg`}
               alt="coworkingImg"
               style={{ mixBlendMode: "multiply" }}
             />
@@ -192,7 +192,7 @@ const Home = () => {
             <Box sx={styles.footContainer}>
               <Box
                 component="img"
-                src="../src/assets/Group1000007102.png"
+                src={`${import.meta.env.BASE_URL}/assets/Group1000007102.png`}
                 alt="App Preview"
                 sx={styles.appPreview}
               />
@@ -209,13 +209,17 @@ const Home = () => {
                   )}
                   <Box display="flex" gap="24px" mt="49px">
                     <img
-                      src="../src/assets/googlePlayDownload.png"
+                      src={`${
+                        import.meta.env.BASE_URL
+                      }/assets/googlePlayDownload.png`}
                       alt="android"
                       width={146}
                       height={45}
                     />
                     <img
-                      src="../src/assets/appStoreDownload.png"
+                      src={`${
+                        import.meta.env.BASE_URL
+                      }/assets/appStoreDownload.png`}
                       alt="apple"
                       width={145}
                       height={45}
@@ -239,7 +243,7 @@ const Home = () => {
             >
               <Box
                 component="img"
-                src="../src/assets/Group1000007102.png"
+                src={`${import.meta.env.BASE_URL}/assets/Group1000007102.png`}
                 alt="App Preview"
                 sx={{
                   width: "285px",
@@ -257,13 +261,17 @@ const Home = () => {
                 justifyContent="center"
               >
                 <img
-                  src="../src/assets/googlePlayDownload.png"
+                  src={`${
+                    import.meta.env.BASE_URL
+                  }/assets/googlePlayDownload.png`}
                   alt="android"
                   width={146}
                   height={45}
                 />
                 <img
-                  src="../src/assets/appStoreDownload.png"
+                  src={`${
+                    import.meta.env.BASE_URL
+                  }/assets/appStoreDownload.png`}
                   alt="apple"
                   width={145}
                   height={45}

@@ -1,7 +1,9 @@
 export const styles = {
   heroSection: (isSmall: boolean) => ({
     position: "relative",
-    backgroundImage: "url(../src/assets/headerBackground.png)",
+    backgroundImage: `url(${
+      import.meta.env.BASE_URL
+    }/assets/headerBackground.png)`,
     backgroundRepeat: "no-repeat",
     WebkitBackgroundSize: "cover",
     backgroundSize: "cover",
