@@ -12,7 +12,7 @@ const TripleArrowIcon = () => (
 interface BuyButtonProps {
   title: string;
   subtitle: string;
-  sx: SxProps;
+  sx?: SxProps;
   discount?: string;
 }
 export default function BuyButton({
@@ -24,6 +24,7 @@ export default function BuyButton({
   return (
     <Box>
       <Button
+        data-testid="button"
         variant="contained"
         endIcon={<TripleArrowIcon />}
         sx={{ borderRadius: "6px", ...sx }}

@@ -4,6 +4,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 const Navbar = () => {
   return (
     <AppBar
+      data-testid="navbar"
       position="sticky"
       sx={{
         bgcolor: "#FFFFFF",
@@ -16,6 +17,7 @@ const Navbar = () => {
       <Toolbar sx={{ height: "100%", ml: 12, mr: 12 }}>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           <img
+            data-testid="logo"
             src={`${import.meta.env.BASE_URL}/assets/logo.svg`}
             alt="Logo"
             style={{ height: 30 }}
@@ -29,7 +31,7 @@ const Navbar = () => {
             boxShadow: "4px 4px 14px 0px #0000000F",
           }}
         >
-          <PhoneIcon />
+          <PhoneIcon data-testid="phoneIcon" />
         </IconButton>
       </Toolbar>
     </AppBar>

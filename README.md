@@ -1,54 +1,124 @@
-# React + TypeScript + Vite
+# Space Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application for booking premium meeting spaces and conference rooms. Built with React, TypeScript, and Vite for optimal performance and developer experience.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend Framework**: React 18+ with TypeScript
+- **Build Tool**: Vite for fast development and optimized builds
+- **Testing**: Vitest + React Testing Library for comprehensive testing
+- **Styling**: Material UI with responsive design principles
+- **Development**: TypeScript for type safety and better developer experience
 
-## Expanding the ESLint configuration
+## 📋 Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Before running this project, make sure you have the following installed:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (version 18 or higher)
+- npm or yarn package manager
+- Git
+
+## 🔧 Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/mdmudassiriqbal/bhive-workspace-assignment
+   cd bhive-workspace-assignment
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the application
+
+## 🧪 Testing
+
+This project includes comprehensive testing setup with Vitest and React Testing Library.
+
+**Run all tests:**
+
+```bash
+npm run test
+# or
+yarn test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📱 Responsive Design
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The application is fully responsive and optimized for:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Desktop computers (1024px and above)
+- Mobile phones (320px - 767px)
+
+## 🏗️ Build and Deployment
+
+**Create production build:**
+
+```bash
+npm run build
+# or
+yarn build
 ```
+
+**Preview production build locally:**
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+**Lint code:**
+
+```bash
+npm run lint
+# or
+yarn lint
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/         # Reusable UI components
+├── pages/              # Page components
+├── utils/              # Utility functions
+├── interfaces/         # TypeScript type definitions
+├── services/           # Api services
+├── store/              # Redux store
+├── constants/          # Static data
+
+public/                 # Public assets
+vite.config.ts          # Vite configuration
+vitest.config.ts        # Vitest configuration
+tsconfig.json           # TypeScript configuration
+package.json            # Project dependencies and scripts
+```
+
+## 🎯 Available Scripts
+
+| Script            | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Create production build  |
+| `npm run preview` | Preview production build |
+| `npm run test`    | Run tests once           |
+
+---
+
+**Built with ❤️ using React, TypeScript, and Vite**
